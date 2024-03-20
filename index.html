@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    
+    <style>
+        .style{
+            background-color: green;
+            color: white;
+            font-size: 20px;
+            padding: 10px 30px ;
+        }
+    </style>
+</head>
+<body>
+    <center style="margin: 0 auto;">
+    <h1>Counter App </h1><br>
+    <button onclick="increment()" class="style">+</button>
+    <button onclick="decrement()" class="style">-</button>
+    <h1 id="count"></h1>
+    <button onclick="reset()" class="style">Reset</button>
+    </center>
+    <script>
+        let count=0;
+        let no = document.getElementById('count').innerHTML = count;
+        const increment=()=>{
+            no++;
+            document.getElementById('count').innerHTML = no;
+        }
+       
+        const decrement=()=>{
+            no--;
+            document.getElementById('count').innerHTML = no;
+        }
+         const reset=()=>{
+            no=0;
+            document.getElementById('count').innerHTML=no;
+         }
+        // Expose the `counter` object to be accessed by other scripts in the page
+    </script>
+    <script src="counter.js"></script>
+</body>
+</html>
